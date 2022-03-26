@@ -28,7 +28,7 @@ for pic in os.listdir(dir):
     if ex != ".jpg":  #"_"代表已经转过了
         try:
             Image.open(infile).convert("RGB").save(outfile)
-            movefile = "converted/" + pic
+            movefile = "converted/" + "d_" + pic
             shutil.move(infile, movefile)
             print("SUCCESS")
         except OSError:
